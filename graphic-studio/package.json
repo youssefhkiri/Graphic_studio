@@ -1,2 +1,6 @@
 "homepage": "https://youssefhkiri.github.io/Graphic_studio",
+"scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist"
+}
 
