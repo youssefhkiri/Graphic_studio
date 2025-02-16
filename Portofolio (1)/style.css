@@ -1,0 +1,109 @@
+:root {
+  --primary: #FF5733;
+  --dark: #0A0F1A;
+  --light: #F1F1F1;
+  --accent: #00FF88; /* لون جديد */
+}
+
+.banner-image {
+  width: 100%; /* أو أي قيمة محددة مثل 800px */
+  height: auto; /* للحفاظ على نسبة العرض إلى الارتفاع */
+}
+
+body {
+  background: linear-gradient(135deg, var(--dark), #1B1F32);
+  color: var(--light);
+  font-family: 'Poppins', sans-serif;
+}
+
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 10rem 2rem 2rem;
+}
+
+.card {
+  aspect-ratio: 683 / 384;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px var(--accent); /* إضافة ظل ملون */
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s ease;
+}
+
+.card:hover img {
+  filter: brightness(0.8) contrast(1.2); /* تأثير على الصورة عند التحويم */
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.lightbox img {
+  max-width: 70%;
+  max-height: 70%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.nav-btn, .close-btn {
+  position: absolute;
+  background-color: var(--primary);
+  color: var(--light);
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.nav-btn:hover, .close-btn:hover {
+  background-color: var(--accent); /* تغيير اللون عند التحويم */
+  transform: scale(1.1);
+}
+
+.prev-btn {
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.next-btn {
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.close-btn {
+  top: 5%;
+  right: 5%;
+}

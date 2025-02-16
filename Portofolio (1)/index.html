@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Youssef Hakiri | Graphic Designer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+</head>
+<body>
+  <header class="header">
+    <img src="000.png" alt="Banner" class="banner-image">
+    <div class="header-overlay">
+      <img src="0.0.png" alt="Banner" class="header-overlay">
+    </div>
+  </header>
+
+  <main>
+    <div class="portfolio">
+      <div class="card" onclick="showAlbum(['3.jpg', '3.1.jpg', '3.2.jpg'])"><img src="3.3.jpg" alt="Cover 3"></div>
+      <div class="card" onclick="showAlbum(['4.jpg'])"><img src="5.png" alt="Cover 5"></div>
+      <div class="card" onclick="showAlbum(['8.jpg'])"><img src="7.jpg" alt="Cover 7"></div>
+      <div class="card" onclick="showAlbum(['6.jpg'])"><img src="9.jpg" alt="Cover 9"></div>
+      <div class="card" onclick="showAlbum(['10.1.jpg'])"><img src="10.png" alt="Cover 10"></div>
+      <div class="card" onclick="showAlbum(['12.jpg', '13.jpg'])"><img src="11.jpg" alt="Cover 11"></div>
+    </div>
+  </main>
+
+  <div class="lightbox" id="lightbox" onwheel="zoomImage(event)">
+    <img id="lightboxImg" src="" alt="Preview">
+    <button class="close-btn" onclick="closeLightbox()">×</button>
+    <button class="nav-btn prev-btn" onclick="prevImage()">‹</button>
+    <button class="nav-btn next-btn" onclick="nextImage()">›</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
